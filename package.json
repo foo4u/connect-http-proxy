@@ -1,6 +1,6 @@
 {
   "name": "connect-http-proxy",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.smt.2",
   "description": "Express/Connect HTTP proxy middleware",
   "main": "index.js",
   "scripts": {
