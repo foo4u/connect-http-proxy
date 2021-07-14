@@ -26,7 +26,8 @@ class HttpProxy {
             agent: this.agent,
             protocol: config.protocol,
             hostname: config.hostname,
-            port: config.port
+            port: config.port,
+            timeout: config.timeout
         };
     }
 
@@ -82,6 +83,7 @@ class HttpProxy {
             });
 
             proxyReq.once("timeout", () => {
+                proxyReq.destroy();
                 next(new Error(`Upstream timeout for ${req.url}`));
             });
 
